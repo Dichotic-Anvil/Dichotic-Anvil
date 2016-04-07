@@ -2,7 +2,12 @@
   "name": "borrow",
   "version": "0.0.0",
   "description": "borrow things from people you know",
-  "authors": ["Michael Balarezo", "Brandon Courtney", "John Zuccarelli", "Jeremy Rosenfeld"],
+  "authors": [
+    "Michael Balarezo",
+    "Brandon Courtney",
+    "John Zuccarelli",
+    "Jeremy Rosenfeld"
+  ],
   "scripts": {
     "start": "gulp"
   },
@@ -18,10 +23,10 @@
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "gulp": "^3.8.5",
+    "gulp-install": "^0.6.0",
     "gulp-nodemon": "^1.0.4",
     "gulp-shell": "^0.2.7"
   },
-
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
