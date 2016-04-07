@@ -19,8 +19,9 @@
     "browser-sync": "^1.5.7",
     "gulp": "^3.8.5",
     "gulp-nodemon": "^1.0.4",
-    "gulp-shell": "^0.2.7",
+    "gulp-shell": "^0.2.7"
   },
+
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
