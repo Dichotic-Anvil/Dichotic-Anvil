@@ -2,10 +2,10 @@ var mongoose = require('mongoose');
 var crypto = require('crypto'); //bcrypt?
 
 var ItemSchema = new mongoose.Schema({
-  _item : { type: Number, ref: 'User' } //referencing the User model
+  _item : { type: Number, ref: 'User' }, //referencing the User model
   borrowed: false,
   itemName: String,
-  url: String,
+  url: String
 
   // visits: Number,
   // link: String,
