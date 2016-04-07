@@ -1,5 +1,5 @@
 # Dichotic-Anvil
-## Team: ## 
+## Team ## 
 
 - Product Owner: Michael Balarezo
 - Scrum Master: Jeremy Rosenfeld
