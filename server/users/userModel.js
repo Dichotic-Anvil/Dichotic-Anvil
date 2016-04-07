@@ -2,8 +2,7 @@ var Q = require('q');
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 var SALT_WORK_FACTOR = 10;
-var Schema = mongoose.Schema,
-
+var Schema = mongoose.Schema;
 
 var UserSchema = new mongoose.Schema({
   username: {
@@ -16,13 +15,14 @@ var UserSchema = new mongoose.Schema({
   inventory: {
     type: [{ type: Schema.Types.ObjectId, ref: 'Items' }], //to populate the inventory array with item ID's
     default: []
-  }
+  },
 
   password: {
     type: String,
-    required: true
+    required: true,
   },
   salt: String
+});
 
 
 // trk : { type : Array , "default" : [] }
