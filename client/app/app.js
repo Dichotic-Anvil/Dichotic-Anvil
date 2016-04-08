@@ -52,4 +52,4 @@ angular.module('borrow', ['borrow.services','borrow.items','borrow.auth','ngRout
     }
   });
 });
-Status API Training Shop Blog About
+
