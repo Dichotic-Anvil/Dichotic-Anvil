@@ -1,7 +1,7 @@
 angular.module('borrow.services',[])
 .factory('Items', function($http) {
 
-  var getAllItems = function() {
+  var getAll = function() {
     return $http({
       method: 'GET',
       url: '/api/items'
@@ -11,7 +11,7 @@ angular.module('borrow.services',[])
     })
   }
 
-  var addOneItem = function(item) {
+  var addOne = function(item) {
     return $http({
       method: 'POST',
       url: 'api/links',
