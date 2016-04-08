@@ -23,10 +23,10 @@ var createSha = function (url) {
   return shasum.digest('hex').slice(0, 5);
 };
 
-LinkSchema.pre('save', function (next) {
+ItemSchema.pre('save', function (next) {
   var code = createSha(this.url);
   this.code = code;
   next();
 });
 
-module.exports = mongoose.model('Link', LinkSchema);
+module.exports = mongoose.model('Items', ItemSchema);
