@@ -3,8 +3,8 @@ angular.module('borrow.auth', [])
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
 
-  $scope.signin = function () {
-    Auth.signin($scope.user)
+  $scope.login = function () {
+    Auth.login($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.borrow', token);
         $location.path('/user');
