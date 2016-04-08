@@ -6,6 +6,10 @@ var carRouter = require('express').Router();
 // var express  express;
 
 module.exports = function(app, express) {
+   app.post('/api/users/login', function(req, res) {
+    console.log(req.body);
+    res.json(req.body)
+  })
   app.post('/api/users/signup', function(req, res) {
     console.log(req.body);
     res.json(req.body)
