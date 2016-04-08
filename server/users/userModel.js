@@ -4,7 +4,7 @@ var bcrypt = require('bcrypt-nodejs');
 var SALT_WORK_FACTOR = 10;
 var Schema = mongoose.Schema;
 
-var UserSchema = new mongoose.Schema({
+var UserSchema = new Schema({
   username: {
     _id: Number,
     type: String,
@@ -13,7 +13,7 @@ var UserSchema = new mongoose.Schema({
   },
 
   inventory: {
-    type: [{ type: Schema.Types.ObjectId, ref: 'Items' }], //to populate the inventory array with item ID's
+    type: [{ type: Schema.Types.ObjectId, ref: 'Item' }], //to populate the inventory array with item ID's
     default: []
   },
 
@@ -68,4 +68,4 @@ var UserSchema = new mongoose.Schema({
 //   });
 // });
 
-// module.exports = mongoose.model('users', UserSchema);
+module.exports = mongoose.model('User', UserSchema);

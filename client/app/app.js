@@ -14,7 +14,7 @@ angular.module('borrow', ['borrow.services','borrow.items','borrow.auth','ngRout
       controller: 'ItemsController',
     })
     .otherwise({
-      redirectTo: '/user'
+      redirectTo: '/login'
     });
     
     // The $httpInterceptor is added into the array

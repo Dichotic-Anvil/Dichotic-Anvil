@@ -17,8 +17,9 @@ angular.module('borrow.auth', [])
   $scope.signup = function () {
     Auth.signup($scope.user)
       .then(function (token) {
+        console.log(token)
         $window.localStorage.setItem('com.borrow', token);
-        $location.path('/user');
+        $location.path('/asfd');
       })
       .catch(function (error) {
         console.error(error);

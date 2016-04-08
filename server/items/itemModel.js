@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var crypto = require('crypto'); //bcrypt?
+var crypto = require('crypto');
 
 var ItemSchema = new mongoose.Schema({
   _item : { type: Number, ref: 'User' }, //referencing the User model
@@ -16,7 +16,6 @@ var ItemSchema = new mongoose.Schema({
 });
 
 
-//Maybe we should use bcrypt?
 var createSha = function (url) {
   var shasum = crypto.createHash('sha1');
   shasum.update(url);
@@ -29,4 +28,4 @@ ItemSchema.pre('save', function (next) {
   next();
 });
 
-module.exports = mongoose.model('Items', ItemSchema);
+module.exports = mongoose.model('Item', ItemSchema);
