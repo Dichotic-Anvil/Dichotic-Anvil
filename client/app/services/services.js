@@ -44,12 +44,14 @@ angular.module('borrow.services',[])
   };
 
   var signup = function (user) {
+    console.log(user);
     return $http({
       method: 'POST',
       url: '/api/users/signup',
       data: user
     })
     .then(function (resp) {
+      console.log(resp);
       return resp.data.token;
     });
   };
