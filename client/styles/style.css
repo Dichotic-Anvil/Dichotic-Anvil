@@ -40,3 +40,8 @@ html, body, .ng-scope {
   float: none;
   display: table-cell;
 }
+
+.container, .container .row, section {
+  background-color: #FFF5D9;
+
+}
