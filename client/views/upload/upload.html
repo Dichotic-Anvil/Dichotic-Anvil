@@ -1,12 +1,28 @@
 <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+<body>
+  <div class="navbar nav-color">
+  <div class="container-fluid">
+  <div class='navbar-left'>
+    <div class="title">
+      <h3 class="text-left">borrow</h3>
+    </div>
+  </div>
+
+    <div class="navbar-right">
+      <p class="navbar-text">
+        <a class="navbar-link" ng-click='signout()'>Logout</a>
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="col-md-8 col-md-offset-2">
     <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2 class="panel-title text-center">
-                <span class="glyphicon glyphicon-user"></span>Upload Item Form
-            </h2>
-        </div>
+        <h2 class="panel-title text-center"><span>Upload Item Form</span></h2>
+
+         <section class="upload" >
         <div class="panel-body">
             <!-- The form to add item information -->
             <form name ="addForm" novalidate>
@@ -24,7 +40,7 @@
                 <div class="form-group">
                     <label for="picture">Main picture</label>
                     <div class="text-center">
-                        <button type="button" class="btn btn-default" ng-click="upload()">
+                        <button type="button"  ng-click="upload()">
                             Upload <span class="caret"></span>
                         </button>
                         <div style="margin-top:10px;">
@@ -62,3 +78,5 @@
         </div>
     </div>
 </div>
+</section>
+</body>
