@@ -27,7 +27,7 @@
 				<a class="btn btn-info" href="#/gallery">Search all the things</a>
         <a class="btn btn-info" href="#/users">Search all the users</a>
 			</div>
-      
+
       <div class="form-group">
         <label for="picture">Profile Picture</label>
         <div class="text-center">
@@ -41,13 +41,16 @@
             </div>
         </div>
       </div>
+
+<button type="submit" class="btn btn-danger btn-block"  ng-click="updateUser()" ng-disabled="user.$invalid || !user.picture">Submit</button>
+
       <h3>My friends</h3>
       <ul>
         <li ng-repeat='friend in user.friends'> {{friend.userName}} </li>
       </ul>
     </div>
 
-                
+
 
     <!-- Right Column -->
     <div class="col-lg-9 dashboard-right">
