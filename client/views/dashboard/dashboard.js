@@ -33,7 +33,20 @@ angular.module('borrow.dashboard', [])
     })
     .error(function(data) {
       console.log('Error: ' + data);
-  });   
+  });
+
+$scope.user = {};
+
+ $scope.updateUser = function () {
+  $http.put('/api/users/:user_id', $scope.user)
+    .success(function(data){
+    console.log(JSON.stringify(data));
+   $scope.user = {};
+  })
+  .error(function(data) {
+    console.log('Error: ' + data);
+  });
+};
 
 $scope.upload = function(){
         filepickerService.pick(
@@ -50,6 +63,7 @@ $scope.upload = function(){
             }
         );
     };
+
   $scope.signout = function() {
     Auth.signout();
   };
