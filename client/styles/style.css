@@ -180,5 +180,11 @@ table.friendtable th  {
     background-color: black;
     color: white;
 }
-
-
+#borrowLogo {
+  text-decoration: none;
+  color: black;
+}
+#borrowLogoLoggedIn:hover {
+    color: inherit;
+    color: black;
+}
