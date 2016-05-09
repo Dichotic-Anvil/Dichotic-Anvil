@@ -29,7 +29,10 @@ angular.module('borrow.dashboard', [])
             for (var j = 0; j < $scope.user.inventory[i].requests.length; j++) {
 
               console.log($scope.user.inventory[i].requests[j]);
-              $scope.requestItems.push($scope.user.inventory[i].requests[j]);
+              console.log($scope.user.inventory[i].itemName);
+
+              //TODO: Bet able to get requested borrowers name in place of 'Someone';
+              $scope.requestItems.push("Someone would like to borrow the " + $scope.user.inventory[i].itemName);
             }
           }
         }
