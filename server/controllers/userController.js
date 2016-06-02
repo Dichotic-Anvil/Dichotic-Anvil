@@ -33,13 +33,8 @@ exports.filterUser = function(userObject, currentUser) {
   }
 
   // process the inventory and make sure we only show requests if the user object is the current user
-  if(userObject._id.toString() !== currentUser._id.toString())
-  {
-      for(var i = 0; i < responseObject.inventory.length; i++)
-      {
-        //console.log(delete responseObject.inventory[i]['requests']);
-
-      }
+  if(userObject._id.toString() !== currentUser._id.toString()) {
+    for(var i = 0; i < responseObject.inventory.length; i++) {}
   }
 
   return responseObject;
