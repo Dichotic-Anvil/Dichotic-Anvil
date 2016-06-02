@@ -2,10 +2,6 @@
   height: 100%;
 }
 
-/*.super-container {
-  margin-top: 30px;
-}*/
-
 .signup-container {
   background-color: #FFFCF2;
   margin-top: 0px;
@@ -87,7 +83,6 @@
   background-color: white;
 
 }
-
 
 .image-block {
     border: 3px solid white ;
@@ -190,5 +185,3 @@ table.friendtable th  {
    color: inherit;
     color: black;
  }
-
-
