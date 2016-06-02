@@ -77,9 +77,6 @@ exports.verifyLogin = function(req, res) {
   var userName = req.body.userName;
   var password = req.body.password;
 
-  console.log('USERNAME======', userName);
-  console.log('PASSWORD======', password);
-
   User.findOne({userName: userName}, function(err, user) {
     if(!user) {
       // no user with that username in database
