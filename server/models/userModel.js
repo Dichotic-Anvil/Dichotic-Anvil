@@ -32,8 +32,6 @@ var userSchema = new Schema({
 
 userSchema.methods.comparePasswords = function(inputPassword, callback) {
   var actualPassword = this.password
-  console.log('INPUT PASSWORD=====', inputPassword)
-  console.log('ACTUAL PASSWORD=====', actualPassword)
   bcrypt.compare(inputPassword, actualPassword, function(err, res) {
     if (err) {
       callback(err, null);
