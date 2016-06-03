@@ -4,7 +4,7 @@ var relationship = require("mongoose-relationship");
 
 var requestSchema = new Schema({
   item : {type: Schema.ObjectId, ref:'Item', childPath: 'requests'},
-  borrower: {type: Schema.ObjectId, ref:'User'}, //req.currentUser
+  borrower: {type: Schema.ObjectId, ref:'User'},
   borrow_message: String,
   durationDays: Number,
   approved: Boolean,

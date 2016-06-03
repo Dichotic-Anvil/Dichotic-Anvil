@@ -23,15 +23,12 @@ module.exports = function (app, express) {
       }
 
       // do the auth check
-      userController.authCheck(req, res, function(passedAuthentication)
-      {
-
+      userController.authCheck(req, res, function(passedAuthentication) {
         // did not pass the auth check, stop the request/response
         if(!passedAuthentication) {
           userController.sendError(res, 'Unauthenticated');
           return;
         }
-
         // continue the request/response
         next();
       });
@@ -62,8 +59,6 @@ module.exports = function (app, express) {
    // REQUESTS
   //============================================
   app.put('/api/requests/:request_id', itemController.updateRequest);
-
-
   app.get('/api/items/:item_id', itemController.retrieveOne);
   app.put('/api/items/:item_id', itemController.updateOne);
   app.delete('/api/items/:item_id', itemController.deleteOne);
